@@ -1,16 +1,17 @@
-#include<stdio.h>
-int fact(int n){
-    if(n==0 || n==1)
-    return 1;
-    else 
-    return n*fact(n-1);
-}
-int main()
-{
+#include <stdio.h>
+
+int main() {
     int n;
-    printf("enter the number");
-    scanf("%d",&n);
-    
-    printf("factorial of %d=%d\n",n,fact(n));
+    long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+
+    printf("Factorial = %lld", fact);
+
     return 0;
 }
